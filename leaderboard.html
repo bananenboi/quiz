@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Leaderboard</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Leaderboard</h1>
+        <table>
+            <tr>
+                <th>Naam</th>
+                <th>Punten</th>
+            </tr>
+            {% for name, score in scores.items() %}
+            <tr>
+                <td>{{ name }}</td>
+                <td>{{ score }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% if top_scorer %}
+        <h2>Hoogste score: {{ top_scorer }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
+
